@@ -4,13 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pascal PetShop</title>
-    <!--Pequeno CSS apenas para ajustar o tamanho das imagens e ter uma experiência mais fluida-->
-    <style> 
-        img {
-            height: 300px;
-            width: 300px;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -23,12 +18,69 @@
                 <li><a href="contato.html">Contato</a></li>
                 <li><a href="sobre.html">Sobre Nós</a></li>
             </ul>
+            <button type="button" class="btn btn-primary"><a href="form.html">Agendar Banho/Tosa</a></button>
         </nav>
     </header>
 
     <hr>
 
     <main>
+
+        <div id="carrossel" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carrossel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carrossel" data-bs-slide-to="1" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carrossel" data-bs-slide-to="2" aria-label="Slide 1"></button>
+            </div>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="carousel-content-wrapper">
+                        <img src="img/acessorios-para-pet.jpg" class="carousel-image-custom" alt="Nossos Acessórios para Pets">
+                        <div class="carousel-caption-custom">
+                            <h5>Confira nossos Acessórios</h5>
+                            <p>Todo tipo de brinquedo para divertir seu amigo do coração!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="carousel-content-wrapper">
+                        <img src="img/racoes.jpg" class="carousel-image-custom" alt="Rações para Pet">
+                        <div class="carousel-caption-custom">
+                            <h5>Compre nossas Rações</h5>
+                            <p>Aqui, nós temos a comida favorita do seu pet!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="carousel-content-wrapper">
+                        <img src="img/banho.jpg" class="carousel-image-custom" alt="Cachorro tomando Banho">
+                        <div class="carousel-caption-custom">
+                            <h5>Os melhores Utensílios de Limpeza/Higiene</h5>
+                            <p>Seu pet de cara nova!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrossel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carrossel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+
+        </div>
+
+
         <h2>Produtos</h2>
         <p>Veja alguns dos nossos produtos em estoque.</p>
 
@@ -36,18 +88,18 @@
 
             <h3>Acessórios</h3>
             
-            <article>
+            <article class="produto">
                 <h4>Arranhador pra Gatos</h4>
                 <img src="img/arranhador.webp" alt="Arranhador Rústico">
                 <p>Ideal para seu gato desestressar e alongar arranhando algo que não seja seu sofá.</p>
-                <p>Preço: R$ 99,90</p>
+                <p class="preco">Preço: R$ 99,90</p>
             </article>
 
-            <article>
+            <article class="produto">
                 <h4>Sombrero pra Cachorro</h4>
                 <img src="img/dogSombrero.webp" alt="Cachorro usando sombrero">
-                <p>Um belo chapeu de estilo mexicano feito para pets.</p>
-                <p>Preço: R$ 39,90</p>
+                <p>Um belo chapeu de estilo mexicano feito para cachorros.</p>
+                <p class="preco">Preço: R$ 39,90</p>
             </article>
 
         </section>
@@ -56,18 +108,18 @@
 
             <h3>Rações não perecíveis</h3>
             
-            <article>
+            <article class="produto">
                 <h4>Ração para Sapos Pacman</h4>
                 <img src="img/sapoRacao.jpg" alt="Lata de ração para Sapo">
                 <p>250g de ração específica para alimentas sapos e rãs.</p>
-                <p>Preço: R$ 44,90</p>
+                <p class="preco">Preço: R$ 44,90</p>
             </article>
 
-            <article>
+            <article class="produto">
                 <h4>Alpiste Puro Variado</h4>
                 <img src="img/alpiste.webp" alt="Pacote de alpiste com rótulo">
                 <p>1kg de sementes e grãos nutritivos para todo tipo de pássaro.</p>
-                <p>Preço: R$ 24,90</p>
+                <p class="preco">Preço: R$ 24,90</p>
             </article>
 
         </section>
@@ -76,18 +128,18 @@
 
             <h3>Higiene e Limpeza</h3>
         
-            <article>
+            <article class="produto">
                 <h4>Escova Dupla de Madeira</h4>
                 <img src="img/escova.webp" alt="Escova de madeira branca com cerdas em ambos os lados">
                 <p>Confeccionado em material de alta qualidade que proporciona conforto, praticidade e resistência.</p>
-                <p>Preço: R$ 14,90</p>
+                <p class="preco">Preço: R$ 14,90</p>
             </article>
 
-            <article>
+            <article class="produto">
                 <h4>Shampoo e Condicionador Neutro</h4>
                 <img src="img/Shampoo.webp" alt="Embalagem de shampoo azul com imagem de cachorro">
                 <p>Ideal para cães e gatos, 700ml</p>
-                <p>Preço: R$ 19,90</p>
+                <p class="preco">Preço: R$ 19,90</p>
             </article>
             
         </section>
@@ -111,5 +163,8 @@
         </nav>
     </footer>
 
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

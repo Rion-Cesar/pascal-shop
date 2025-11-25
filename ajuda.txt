@@ -1,0 +1,20 @@
+Instruções simples para o website
+
+Página Inicial: Permite visualizar alguns dos produtos disponíveis na
+loja, viajar para outras páginas (Contato, Sobre Nós e Política de 
+Privacidade) e Agendar Banho ou Tosa.
+
+Contato: Informações de Contato da empresa e as mesmas opções de
+navegação.
+
+Sobre Nós: Informações Pessoais da empresa e as mesmas opções de
+navegação.
+
+Política de Privacidade: Explanação das políticas de privacidade da
+empresa e as mesmas opções de navegação.
+
+Formulário para Agendamento: Inserção de informações do cliente e
+do pet em questão, além da seleção do serviço e método de atendimento.
+
+Confirmar: Após agendamento, página de confirmação de inserção de
+dados com opção de retornar para o começo do site.

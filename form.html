@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário para Agendamento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <form id="form">
+        <h3>Dados do Cliente</h3>
+        
+        <div>
+            <label for="nomeCliente">Nome Completo:</label>
+            <input type="text" id="nomeCliente" name="nomeCliente" placeholder="Seu Nome" required>
+        </div>
+
+        <div>
+            <label for="enderecoCliente">Endereço:</label>
+            <input type="text" id="enderecoCliente" name="enderecoCliente" placeholder="Onde Você Mora" required>
+        </div>
+
+        <div>
+            <label for="cpfCliente">CPF:</label>
+            <input type="number" id="cpfCliente" name="cpfCliente" placeholder="Apenas os Números" required>
+        </div>
+
+        <div>
+            <label for="teleCliente">Telefone:</label>
+            <input type="tel" id="teleCliente" name="teleCliente" placeholder="(53) 90000-0000" required>
+        </div>
+
+        <div>
+            <label for="emailCliente">E-mail:</label>
+            <input type="email" id="emailCliente" name="emailCliente" placeholder="exemploemail@gmail.com" required>
+        </div>
+
+        <hr>
+
+        <h3>Dados do Pet</h3>
+
+        <div>
+            <label for="nomePet">Nome Completo:</label>
+            <input type="text" id="nomePet" name="nomePet" required>
+        </div>
+
+        <div>
+            <label for="racaPet">Raça:</label>
+            <input type="text" id="racaPet" name="racaPet" required>
+        </div>
+
+        <div>
+            <label for="idadePet">Anos de Idade:</label>
+            <input type="number" id="idadePet" name="idadePet" required>
+        </div>
+
+        <hr>
+
+        <h3>Serviço e Agendamento</h3>
+
+        <p>Selecione o serviço:</p>
+
+        <div class="radios">
+            <input type="radio" id="servicoBanho" name="servico" value="banho" required>
+            <label for="servicoBanho">Banho</label>
+        
+
+            <input type="radio" id="servicoTosa" name="servico" value="tosa">
+            <label for="servicoTosa">Tosa</label>
+        </div>
+
+        <p>Método de Agendamento:</p>
+
+        <div class="radios">
+            <input type="radio" id="metodoTele" name="metodo" value="tele">
+            <label for="metodoTele">Tele-Busca</label>
+
+            <input type="radio" id="metodoLocal" name="metodo" value="local">
+            <label for="metodoLocal">No Local</label>
+        </div>
+
+        <div id="enderecoCampo" style="display:none; margin-top: 15px;">
+            <label for="enderecoCliente">Endereço (Obrigatório para Tele-Busca)</label>
+            <input type="text" id="enderecoCliente" name="enderecoCliente" placeholder="Rua, Número, Bairro">
+        </div>
+
+        <div>
+            <label for="dataAgendamento">Data</label>
+            <input type="date" id="dataAgendamento" name="dataAgendamento" required>
+        </div>
+
+        <div>
+            <label for="horaAgendamento">Hora</label>
+            <input type="time" id="horaAgendamento" name="horaAgendamento" min="08:00" max="17:00" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary"><a href="confirmar.html">Agendar Serviço</a></button>
+        <button type="button" class="btn btn-primary"><a href="index.html">Retornar</a></button>
+
+    </form>
+
+    <script src="main.js"></script>
+</body>
+</html>
